@@ -1,0 +1,34 @@
+#print ("I will now count my chickens:")
+#godine = 20
+#ime = 'Swaroop'
+#print('{0} je imao {1} godina, kada je napisao ovu knjigu.'.format(ime,
+#godine))
+#print('Zasto se {0} igra sa tim Python-om?'.format(ime))
+
+#def change(some_list):
+#    some_list[1] = 4
+#x = [1,2,3]
+#change(x)
+#print(x) # Prints out [1,4,3]
+
+
+
+
+#def nochange(x):
+#    x = 0
+#y = 12
+
+
+#nochange(y)
+#print(y) # Prints out 1
+
+#def pomnozi(m):
+#    return m ** 2
+#u = 3
+#input(u)
+#pomnozi(u)
+#print("K na drugu je:",u)
+
+
+
+

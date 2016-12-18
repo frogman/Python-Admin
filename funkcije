@@ -1,0 +1,64 @@
+def happyBirthday(person):
+    print("Happy Birthday to you!")
+    print("Happy Birthday to you!")
+    print("Happy Birthday, dear " + person + ".")
+    print("Happy Birthday to you!")
+
+def main():
+    happyBirthday("Emily")
+    happyBirthday("Andre")
+
+main()
+
+answer = "'Tis but a scratch!"
+
+def black_knight():
+    if answer == "'Tis but a scratch!":
+        return True
+    else:
+        return False     # Make sure this returns False
+
+def french_soldier():
+    if answer == "Go away, or I shall taunt you a second time!":
+        return True
+    else:
+        return False       # Make sure this returns False
+print(french_soldier())
+print(black_knight())
+
+def using_control_once():
+    if 2 > 1:
+        return "Success #1"
+
+def using_control_again():
+    if 3 > 2:
+        return "Success #2"
+
+print(using_control_once())
+print(using_control_again())
+
+
+def greater_less_equal_5(answer):
+    if answer > 5:
+        return 1
+    elif answer < 5:
+        return -1
+    else:
+        return 0
+
+
+print(greater_less_equal_5(4))
+print(greater_less_equal_5(5))
+print(greater_less_equal_5(6))
+
+
+# Make sure that the_flying_circus() returns True
+def the_flying_circus():
+    if 2 == 2:  # Start coding here!
+        return True  # Don't forget to indent
+        # the code inside this block!
+    elif 2 == 2 and 3 != 3:
+        return False  # Keep going here.
+    else:  # You'll want to add the else statement, too!
+        return True
+print(the_flying_circus( ))
