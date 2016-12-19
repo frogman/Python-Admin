@@ -38,5 +38,9 @@ square( 10 )
 def power(base, exponent):  # Add your parameters here!
     result = base**exponent
     print("%d to the power of %d is %d." % (base, exponent, result))
-
+#Function bodies can contain one or more return statement. They can be situated anywhere in the function body.
+#A return statement ends the execution of the function call and "returns" the result, i.e. the value of the expression following the return keyword,
+# to the caller. If the return statement is without an expression, the special value None is returned.
+#If there is no return statement in the function code, the function ends, when the control flow reaches the end
+#of the function body and the value "None" will be returned.
 power(37,4)  # Add your arguments here!
