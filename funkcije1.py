@@ -51,3 +51,14 @@ def one_good_turn(n):
 
 def deserves_another(n):
     return one_good_turn( n ) + 2 #poziv prethhodne funkcije sa parametrom svojim n - koji je promenjen (n+1) kroz prvu funkciju
+
+
+def cube(number):
+    return number ** 3 #vraca broj na trecu - triput pomno
+
+def by_three(number):
+    if number % 3 == 0: #ako je broj djeljiv sa 3 onda pozovi proceduru cube i promjeni argument kroz metodu procedure cube (triputa pomnozi)
+        return cube( number )
+    else:
+        return False
+by_three( 1 )
