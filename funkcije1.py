@@ -44,3 +44,10 @@ def power(base, exponent):  # Add your parameters here!
 #If there is no return statement in the function code, the function ends, when the control flow reaches the end
 #of the function body and the value "None" will be returned.
 power(37,4)  # Add your arguments here!
+
+#primjer poziva funkcije iz druge funkcije
+def one_good_turn(n):
+    return n + 1
+
+def deserves_another(n):
+    return one_good_turn( n ) + 2 #poziv prethhodne funkcije sa parametrom svojim n - koji je promenjen (n+1) kroz prvu funkciju
