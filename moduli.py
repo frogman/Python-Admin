@@ -7,3 +7,12 @@ print(math.sqrt(25))
 
 #from module import function
 #Now you can just type sqrt() to get the square root of a number—no more math.sqrt()!
+
+# Import *everything* from the math module on line 3!
+#from math import *
+
+
+#show all functions in math module
+import math            # Imports the math module
+everything = dir(math) # Sets everything to a list of things from math
+print(everything)       # Prints 'em all!
