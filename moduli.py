@@ -36,3 +36,16 @@ def distance_from_zero(arg):
 biggest_number( -10, -5, 5, 10 )
 smallest_number( -10, -5, 5, 10 )
 distance_from_zero( -10 )
+
+# Set maximum to the max value of any set of numbers on line 3!
+maximum = max(23,45,443)
+print(maximum)
+
+
+#abs()
+#The abs() function returns the absolute value of the number it takes as an argument—that is,
+# that number's distance from 0 on an imagined number line. For instance, 3 and -3 both have the same absolute value: 3.
+# The abs() function always returns a positive value, and unlike max() and min(), it only takes a single number.
+absolute = abs(-42)
+print(absolute)
+
