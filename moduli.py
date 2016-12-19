@@ -17,7 +17,7 @@ import math            # Imports the math module
 everything = dir(math) # Sets everything to a list of things from math
 print(everything)       # Prints 'em all!
 
-print("Uporedjivanje brojeva - ugradjene funkcije u python nisu potrebni moduli")
+print("Uporedjivanje brojeva - ugradjene funkcije u python nisu potrebni moduli \n")
 def biggest_number(*args): #zvjezdicom mozemo vise argumenata u nizu dodjeliti pozivanjem funkcije
     print(max( args ))
     return max( args )
