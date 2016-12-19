@@ -10,6 +10,8 @@ def tip(bill):
     bill *= 1.15 #1.15  #!!!!bill varijabla-objekat se ne nasledjuje kroz funkcije - one su privatne unutar funkcija
     print("With tip: %f" % bill)
     return bill
+#http://www.saltycrane.com/blog/2008/01/python-variable-scope-notes/
+#globalne i lokalne variable unutar funkcija
 
 
 meal_cost = 100
