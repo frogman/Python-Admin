@@ -41,6 +41,11 @@ distance_from_zero( -10 )
 maximum = max(23,45,443)
 print(maximum)
 
+#http://openbookproject.net/thinkcs/python/english3e/fruitful_functions.html
+def area(radius):
+    b = 3.14159 * radius**2
+    return b
+
 
 #abs()
 #The abs() function returns the absolute value of the number it takes as an argument—that is,
