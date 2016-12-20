@@ -101,3 +101,12 @@ def plane_ride_cost(city):
        return 222
     elif city == "Los Angeles":
        return 475
+
+#In the above example, we first give the player 10 tickets for every point that the player scored. Then, we check the value of score multiple times.
+def finish_game(score):
+    tickets = 10 * score
+    if score >= 10:
+        tickets += 50
+    elif score >= 7:
+        tickets += 20
+    return tickets
