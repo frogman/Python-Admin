@@ -12,3 +12,5 @@ def rentalcarcost(days):
     elif days >= 3:
        cost -= 20
        return cost
+input(rentalcarcost(days))
+print("The cost of days with discount is: %s" % (rentalcarcost()))
