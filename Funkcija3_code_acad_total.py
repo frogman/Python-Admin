@@ -1,3 +1,4 @@
+#Vacation Plan of costs - sum of 3 functions
 def hotel_cost(nights):
     return 140 * nights
 
