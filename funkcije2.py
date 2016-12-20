@@ -5,12 +5,23 @@
 #You cannot get both of the above discounts.
 #Return that cost.
 
-def rentalcarcost(days):
-    cost = 40 * days
+#nije radila
+#def rental_car_cost(days):
+#    car_cost = 40 * days
+#    if days >= 7:
+#       car_cost -= 50
+#    elif days >= 3:
+#       car_cost -= 20
+#       return car_cost
+
+def rental_car_cost(days):
+    carcost = 40 * days
     if days >= 7:
-       cost -= 50
+       carcost -= 50
     elif days >= 3:
-       cost -= 20
-       return cost
-b = 4
-print((rentalcarcost(b)))
+         carcost -= 20
+    return carcost #!!!! PRETHODNA funkcija nije radila jer je return bio uvucen i ident se odnosio samo na poslednju petlju (elif)
+                   #a ne na cjelu proceduru - return mora biti u ravni sa if i elif!!!!!!!
+
+b = 1
+print((rental_car_cost(1)))
