@@ -1,3 +1,6 @@
+#!!! When the function comes to a return it brakes and it is finished.
+
+
 def tax(bill):
     """Adds 8% tax to a restaurant bill."""
     bill *= 1.08 #bill = bill * 1.08
@@ -76,3 +79,12 @@ def shut_down(s):
        return "Shutdown Aborted"
     else:
        return "Sorry"
+
+#If the type of the argument is either int or float, the function should return the absolute value of the function input.
+def distance_from_zero(n):
+
+    if type( n ) == int or type( n ) == float:
+        print("The absolute value of the input is ", abs( n ))
+        return abs( n )
+    else:
+        return "Nope"
