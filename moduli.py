@@ -45,7 +45,9 @@ print(maximum)
 def area(radius):
     b = 3.14159 * radius**2
     return b
-
+#simplified fruitful function without b parameter
+def area(radius):
+    return 3.14159 * radius * radius
 
 #abs()
 #The abs() function returns the absolute value of the number it takes as an argument—that is,
