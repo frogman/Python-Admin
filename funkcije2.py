@@ -23,5 +23,5 @@ def rental_car_cost(days):
     return carcost #!!!! PRETHODNA funkcija nije radila jer je return bio uvucen i ident se odnosio samo na poslednju petlju (elif)
                    #a ne na cjelu proceduru - return mora biti u ravni sa if i elif!!!!!!!
 
-b = 1
-print((rental_car_cost(1)))
+b = 7
+print((rental_car_cost(b)))
