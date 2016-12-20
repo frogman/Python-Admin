@@ -110,3 +110,6 @@ def finish_game(score):
     elif score >= 7:
         tickets += 20
     return tickets
+
+print("Score of a player:")
+print(finish_game(11))
