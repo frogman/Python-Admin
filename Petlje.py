@@ -1,5 +1,5 @@
 #Running through all the items in a list is called traversing the list, or traversal.
-for each item in a list run the foor lpp
+#for each item in a list run the foor lpp
 for f in ["Joe", "Zoe", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
     invitation = "Hi " + f + ".  Please come to my party on Saturday!"
     print(invitation)
@@ -19,3 +19,17 @@ print(mysum([ ]) == 0)
 print(mysum(range(11)) == 55)  # 11 is not included in the list.
 
 #while statement
+#You can almost read the while statement as if it were English. It means, while v is less than or equal to n,
+#  continue executing the body of the loop. Within the body, each time, increment v. When v passes n, return your accumulated sum.
+def sum_to(n):
+    """Return the sum of 1+2+3 ... n"""
+    ss = 0
+    v = 1
+    while v <= n: #dok je parametar n veci ili jednak od v evauliraj metode u petlji
+        ss = ss + v
+        v = v + 1
+    return ss
+print(sum_to(4) == 10)
+print(sum_to(2))
+
+
