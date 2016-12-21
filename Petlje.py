@@ -61,5 +61,7 @@ def seq3np1(n):
         else:                 # n is odd
             n = n * 3 + 1
     print(n, end=".\n")
+seq3np1(3)
+seq3np1(9)
 
 
