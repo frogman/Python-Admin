@@ -32,4 +32,34 @@ def sum_to(n):
 print(sum_to(4) == 10)
 print(sum_to(2))
 
+#ista funkcija sa for petljom
+#Notice the slightly tricky call to the range function —
+#we had to add one range onto n, because range generates its list up to but excluding the value you give it.
+#range generise listu do broja kojeg mu date ali iskljuci njega tip n = 4 , lista[1,2,3]
+def sum_to_with_for(n):
+    """ Return the sum of 1+2+3 ... n """
+    ss  = 0
+    for v in range(n+1): #za v u nizu od n=3 - [1,2]
+        ss = ss + v
+    return ss
+print(sum_to_with_for(4)) #1+2+3+4 = 10 - rezultat
+
+#The Collatz 3n + 1 sequence¶
+#Let’s look at a simple sequence that has fascinated and foxed mathematicians for many years.
+#They still cannot answer even quite simple questions about this.
+#The “computational rule” for creating the sequence is to start from some given n, and to generate the next term of the sequence from n,
+#either by halving n, (whenever n is even), or else by multiplying it by three and adding 1. The sequence terminates when n reaches 1.
+
+def seq3np1(n):
+    """ Print the 3n+1 sequence from n,
+        terminating when it reaches 1.
+    """
+    while n != 1:
+        print(n, end=", ")
+        if n % 2 == 0:        # n is even
+            n = n // 2
+        else:                 # n is odd
+            n = n * 3 + 1
+    print(n, end=".\n")
+
 
