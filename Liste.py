@@ -28,3 +28,12 @@ print(last)
 #myList[3:5]
 #Returns [3, 4]
 
+#!!! List indexing nije isto sto i slicing - kod indeksiranja biramo poziciju pocevsi od nule kao prvi karakter
+#kod slicing - rezanja mi brojimo od 0 ukljucenjo prvo desno do zadnjeg iskljcueno npr 5
+
+word = "Python"
+#indexing
+print(word[3]) # stampa indeksira poziciju 3 - dobijamo h
+#slicing
+print(word[0:2]) #ukljucuje poziciju prvu i stampa 0 i 1 i ukljucuje 2 ali ne stampa broj 2 - dobijamo Py
+
