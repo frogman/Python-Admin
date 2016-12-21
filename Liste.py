@@ -10,3 +10,21 @@ print("Adding the numbers at indices 1 and 3...")
 #INDICES -INDEXI
 print(numbers[1] + numbers[3])
 
+letters = ['a','b','c']
+letters.append('d')
+print(len(letters))
+print(letters)
+
+suitcase = ["sunglasses", "hat", "passport", "laptop", "suit", "shoes"]
+first  = suitcase[0:2]  # The first and second items (index zero and one)
+middle = suitcase[2:4]  # Third and fourth items (index two and three)
+last   = suitcase[4:6]  # The last two items (index four and five)
+
+print(first)
+print(middle)
+print(last)
+#List slicing - we start counting indices from 0 and that we stopped before index 3.
+#myList = [0,1,2,3,4], the ending index of your slice will be one beyond the actual last index of the list. Check it out:
+#myList[3:5]
+#Returns [3, 4]
+

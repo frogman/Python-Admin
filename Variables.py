@@ -1,3 +1,7 @@
+#PYTHON OPERATOR
+#https://www.programiz.com/python-programming/operators
+
+
 #int(x [,base])
 #Converts x to an integer. base specifies the base if x is a string.
 
