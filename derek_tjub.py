@@ -8,7 +8,7 @@ ote on the other side'''
 
 print("%s %s %s" % ('I like quote', quote, multiquote))
 
-#print('\n' * 5) #5 novih linija puta 5
+print('\n' * 5) #5 novih linija puta 5
 print("Bez nove linije", end="")
 print("-nastavljamo stampanje")
 
@@ -50,7 +50,51 @@ super_villains = {'Fidler' :  'Isaac Bowin',
                   'Crni Guja' : 'Nikola Kojo',
                   'Supermen' : 'Clark Kirk'}
 
-print(super_villains)
+print(super_villains['Crni Guja']) #stampamo mapu povezanu kljucevima sa : unutar recnika
+del super_villains['Supermen']
+print(len(super_villains))
+super_villains['Captain Cold'] = 'Neki novi'
+print(super_villains.get("Clark Kirk"))
+print(super_villains.keys())
+
+#LOOPS
+# You can use for loops to cycle through a list
+grocery = ['Juice', 'Tomatoes', 'Potatoes', 'Bananas']
+for y in grocery:
+    print( y )
+
+#WHILE LOOPS
+# WHILE LOOPS -------------
+# While loops are used when you don't know ahead of time how many
+# times you'll have to loop
+random_num = random.randrange( 0, 100 )
+
+while (random_num != 5):
+    print( random_num )
+    random_num = random.randrange( 0, 10 )
+
+# An iterator for a while loop is defined before the loop
+i = 0;
+while (i <= 20):
+    if (i % 2 == 0):
+        print( i )
+    elif (i == 9):
+        # Forces the loop to end all together
+        break
+    else:
+        # Shorthand for i = i + 1
+        i += 1
+        # Skips to the next iteration of the loop
+        continue
+
+    i += 1
+print('\n')
+for x in [1,3,5,6,23,2]:
+    print (x)
+
+
+
+
 
 
 
