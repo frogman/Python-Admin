@@ -74,7 +74,7 @@ while (random_num != 5):
     random_num = random.randrange( 0, 10 )
 
 # An iterator for a while loop is defined before the loop
-i = 0;
+i = 0; #pocinjemo sa 0 i se sabira
 while (i <= 20):
     if (i % 2 == 0):
         print( i )
