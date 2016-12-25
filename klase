@@ -12,3 +12,34 @@ class Horse(object):
     def movement(self):
         return "walk"
 
+class Point: # kreiramo klasu Point
+    "prezentuje x,y manipulacije koordinatama"
+    def __init__(self, x=0, y=0):
+        """Create a new point at x,y"""
+        self.x = x
+        self.y = y
+
+    def distance_from_origin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+    def print_point(pt): #instance kao argumenti ili parametri
+        print("({0}, {1})".format(pt.x,pt.y)) #printpoint(p) ce odstampati objekat p i njegove vrednosti
+
+    def __str__(self): #builtin metoda za konnverziju output-a u String
+        return "({0}, {1})".format(self.x, self.y)
+
+
+p = Point(3,4)
+print("Pozivamo instance objekata - prethodno kreiran p - objekat sa vrednostima 3,4")
+p.x
+p.y
+print("Koristimo metodu da izracunamo udaljenost od porekla")
+p.distance_from_origin()
+print("Koristimo __str__ metodu da konvertujemo output u string i pozovemo sa str() funkcijom")
+str(p)
+print(p)
+
+
+
+
+
