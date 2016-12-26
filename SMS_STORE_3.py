@@ -21,3 +21,16 @@ class SMS_store:
             if v[0] == "Read: False":        #raditi operacija sa v objektom-varijablom
                 result.append(i)
         return(result)
+
+    def get_message(self,i):
+        msg = self.store[i]
+        msg = ("Read: True",) + msg[1:]
+        self.store[i] = (msg)
+        return (self.store[i][1:])
+
+    def delete(self,i):
+        del self.store[i]
+
+    def clear(self):
+        self.store = []
+
