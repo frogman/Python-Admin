@@ -16,10 +16,10 @@ def message_count(self):
     return print("Amt of messages in inbox: {}".format(len(sms_store.store)))
 def viewall(self):
     print(sms_store.store)
-def get_unread_indexes(self):
-    #### ###################################I need help for this method.
-def get_message(self,i)
+
+def get_message(self,i):
     print(sms_store.store[i])
+
 ### tests ####
 time = datetime.now().strftime('%H:%M:%S')
 my_inbox = sms_store() #instantiate an object 'store' for class

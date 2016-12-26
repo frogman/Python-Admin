@@ -1,7 +1,7 @@
 #TASK - Create a new class, SMS_store. The class will instantiate SMS_store objects, similar to an inbox or outbox on a cellphone:
 from datetime import datetime
 
-class SMS_store:
+class sms_store:
 
     def __init__(self):
         self.store = [] #inicijalizacija kad god se objekat pozove - instancira
@@ -10,7 +10,7 @@ class SMS_store:
         return ("{0}".format(self)) #konverzija u string
 
     def add_new_arrival(self, number, time, text): #funkcija za novi SMS dolazak
-        self.store.append( ("Read: False", "From: " + number, "Received: " + time, "Msg: " + text) )
+        self.store.append( (str("Read: False"), "From: " + number, "Received: " + time, "Msg: " + text) )
 
     def message_count(self):
         return(len(self.store))
@@ -31,6 +31,13 @@ class SMS_store:
     def delete(self,i):
         del self.store[i]
 
+    def print_all(self):
+        print(sms_store.store)
+
     def clear(self):
         self.store = []
+
+time = datetime.now().strftime('%H:%M:%S')
+inbox = sms_store() #instanciranje objekta inbox od klase sms_store
+sms_store.add_new_arrival(inbox,44,time,"Hello I am the first sms")
 
