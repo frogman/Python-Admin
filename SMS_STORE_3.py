@@ -10,4 +10,14 @@ class SMS_store:
         return ("{0}".format(self)) #konverzija u string
 
     def add_new_arrival(self, number, time, text): #funkcija za novi SMS dolazak
-        self.store.append( ("Read: False", "From: " + number, "Recieved: " + time, "Msg: " + text) )
+        self.store.append( ("Read: False", "From: " + number, "Received: " + time, "Msg: " + text) )
+
+    def message_count(self):
+        return(len(self.store))
+
+    def get_unread_indexes(self):
+        result = []
+        for (i, v) in enumerate(self.store): #listanje za svaki element u store listi i dodavanja indeksa 1,2,3 u vidu v varijable da bi se mogla kasnije
+            if v[0] == "Read: False":        #raditi operacija sa v objektom-varijablom
+                result.append(i)
+        return(result)
