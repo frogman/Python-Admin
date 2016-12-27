@@ -10,7 +10,9 @@ class sms_store:
         return ("{0}".format(self)) #konverzija u string
 
     def add_new_arrival(self, number, time, text): #funkcija za novi SMS dolazak
-        self.store.append( (str("Read: False"), "From: " + number, "Received: " + time, "Msg: " + text) )
+        #self.store.append( "Read: False", "From: " + number, "Received: " + time, "Msg: " + text)
+        self.store.append( ("From: {}, Received: {}, Msg: {}".format( number, time, text ) ))
+        self.store.insert(0,"Read: False") #dodajem na index 0 informaciju da sms nije procitan
 
     def message_count(self):
         return(len(self.store))
@@ -24,20 +26,26 @@ class sms_store:
 
     def get_message(self,i):
         msg = self.store[i]
-        msg = ("Read: True",) + msg[1:]
+        msg = ("Read: True",) + msg[0:]
         self.store[i] = (msg)
-        return (self.store[i][1:])
+        return (self.store[i][0:])
 
     def delete(self,i):
         del self.store[i]
 
-    def print_all(self):
-        print(sms_store.store)
+    def print_all(self) -> object:
+        return print(self.store)
 
     def clear(self):
-        self.store = []
+        return self.store = []
 
 time = datetime.now().strftime('%H:%M:%S')
 inbox = sms_store() #instanciranje objekta inbox od klase sms_store
-sms_store.add_new_arrival(inbox,44,time,"Hello I am the first sms")
+#https://www.programiz.com/article/python-self-why
+#u ovom slucaju in
+inbox.add_new_arrival(44,time,"Hello I am the first sms")
+inbox.add_new_arrival(232,time,"Hello I am the second sms")
+#inbox.get_message(1)
+inbox.print_all()
+#inbox.clear()
 
