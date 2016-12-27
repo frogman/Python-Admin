@@ -3,6 +3,7 @@ from datetime import datetime
 
 class sms_store:
 
+    has_been_viewed = False
     def __init__(self):
         self.store = [] #inicijalizacija kad god se objekat pozove - instancira
 
@@ -12,12 +13,11 @@ class sms_store:
     def add_new_arrival(self, number, time, text): #funkcija za novi SMS dolazak
         #self.store.append( "Read: False", "From: " + number, "Received: " + time, "Msg: " + text)
         self.store.append( ("From: {}, Received: {}, Msg: {}".format( number, time, text ) ))
-        self.store.insert(0,"Read: False") #dodajem na index 0 informaciju da sms nije procitan
 
     def message_count(self):
         return(len(self.store))
 
-    def get_unread_indexes(self):
+    def get_unread_indexes(self):  #moram sa has_been_viewed nekako resiti
         result = []
         for (i, v) in enumerate(self.store):
             if v[0] == "Read: False":
@@ -37,14 +37,14 @@ class sms_store:
         return print(self.store)
 
     def clear(self):
-        return self.store = []
+        self.store = []
 
 time = datetime.now().strftime('%H:%M:%S')
 inbox = sms_store() #instanciranje objekta inbox od klase sms_store
 #https://www.programiz.com/article/python-self-why
 #u ovom slucaju in
-inbox.add_new_arrival(44,time,"Hello I am the first sms")
-inbox.add_new_arrival(232,time,"Hello I am the second sms")
+inbox.add_new_arrival(441223324343,time,"Hello I am the first sms")
+inbox.add_new_arrival(436648832123,time,"Hello I am the second sms")
 #inbox.get_message(1)
 inbox.print_all()
 #inbox.clear()
