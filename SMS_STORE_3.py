@@ -19,8 +19,8 @@ class sms_store:
 
     def get_unread_indexes(self):
         result = []
-        for (i, v) in enumerate(self.store): #listanje za svaki element u store listi i dodavanja indeksa 1,2,3 u vidu v varijable da bi se mogla kasnije
-            if v[0] == "Read: False":        #raditi operacija sa v objektom-varijablom
+        for (i, v) in enumerate(self.store):
+            if v[0] == "Read: False":
                 result.append(i)
         return(result)
 
