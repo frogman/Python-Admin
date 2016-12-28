@@ -33,19 +33,21 @@ class sms_store:
     def delete(self,i):
         del self.store[i]
 
-    def print_all(self) -> object:
+    def print_all(self):
         return print(self.store)
 
     def clear(self):
-        self.store = []
+        self.store.clear()
 
 time = datetime.now().strftime('%H:%M:%S')
 inbox = sms_store() #instanciranje objekta inbox od klase sms_store
 #https://www.programiz.com/article/python-self-why
-#u ovom slucaju in
+#u ovom slucaju inbox
 inbox.add_new_arrival(441223324343,time,"Hello I am the first sms")
 inbox.add_new_arrival(436648832123,time,"Hello I am the second sms")
+#print("Ukupno: " + (inbox.message_count())
 #inbox.get_message(1)
+inbox.clear()
 inbox.print_all()
-#inbox.clear()
+
 
