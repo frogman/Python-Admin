@@ -4,6 +4,8 @@ from datetime import datetime
 class sms_store:
 
     has_been_viewed = False
+    read = False
+
     def __init__(self):
         self.store = [] #inicijalizacija kad god se objekat pozove - instancira
 
@@ -12,17 +14,30 @@ class sms_store:
 
     def add_new_arrival(self, number, time, text): #funkcija za novi SMS dolazak
         #self.store.append( "Read: False", "From: " + number, "Received: " + time, "Msg: " + text)
-        self.store.append( ("From: {}, Received: {}, Msg: {}".format( number, time, text ) ))
+        self.store.append( ("From: {}, Received: {}, Msg: {}".format( number, time, text )) )
+        self.store.insert(3,"Read: False")
+
 
     def message_count(self):
         return(len(self.store))
 
-    def get_unread_indexes(self):  #moram sa has_been_viewed nekako resiti
+    def read_messages(self): #funkcija radi - za string False u objektu inbox pronadji i dodaj u result
+        i = "Read: False"
         result = []
-        for (i, v) in enumerate(self.store):
-            if v[0] == "Read: False":
-                result.append(i)
+        for i in self.store:
+            result.append(i)
         return(result)
+
+
+
+
+  #  def get_unread_indexes(self):  #moram sa has_been_viewed nekako resiti - ne radi kako treba - sa stack overflow
+   #     result = [1]
+    #    for (i, v) in enumerate(self.store):
+     #       if v[3] == "Read: False":
+      #          result.append(i)
+       # return(result)
+
 
     def get_message(self,i):
         msg = self.store[i]
@@ -47,7 +62,14 @@ inbox.add_new_arrival(441223324343,time,"Hello I am the first sms")
 inbox.add_new_arrival(436648832123,time,"Hello I am the second sms")
 #print("Ukupno: " + (inbox.message_count())
 #inbox.get_message(1)
-inbox.clear()
+#inbox.clear()
+#inbox.print_all()
+#print(inbox.get_unread_indexes())
+print(inbox.read_messages())
+
+
+
+
 inbox.print_all()
 
 
